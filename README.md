@@ -78,4 +78,4 @@ Add `skills-npm` to the consuming project's prepare script:
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT)
+[MIT License](./LICENSE)
