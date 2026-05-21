@@ -1,6 +1,6 @@
-# BEM Modifier Classes Skills
+# BEM Classnames Skills
 
-Agent skills for `@trenlok/bem-modifier-classes`.
+Agent skills for `@rhapsodic/bem-classnames`.
 
 These skills are plain `SKILL.md` folders and are not tied to a specific AI
 provider. They can be installed through tools that understand package-based
@@ -24,13 +24,13 @@ Add a prepare script to the consuming project:
 Install the skills package:
 
 ```bash
-pnpm add -D @trenlok/bem-modifier-classes-skills skills-npm
+pnpm add -D @rhapsodic/bem-classnames-skills skills-npm
 ```
 
 With npm:
 
 ```bash
-npm install -D @trenlok/bem-modifier-classes-skills skills-npm
+npm install -D @rhapsodic/bem-classnames-skills skills-npm
 ```
 
 ## Installation with npx skills
@@ -38,20 +38,20 @@ npm install -D @trenlok/bem-modifier-classes-skills skills-npm
 Install all skills from the GitHub repository:
 
 ```bash
-npx skills add TrenLok/bem-modifiers-classes --all
+npx skills add rhapsodic-dev/bem-classnames --all
 ```
 
 Install a specific skill:
 
 ```bash
-npx skills add TrenLok/bem-modifiers-classes --skill bem-modifier-classes
-npx skills add TrenLok/bem-modifiers-classes --skill bem-modifier-classes-v2-migration
+npx skills add rhapsodic-dev/bem-classnames --skill bem-classnames
+npx skills add rhapsodic-dev/bem-classnames --skill bem-classnames-v2-migration
 ```
 
 ## Included Skills
 
-- `bem-modifier-classes` - usage guide for the v2 API.
-- `bem-modifier-classes-v2-migration` - migration workflow from v1 to v2.
+- `bem-classnames` - usage guide for the v2 API.
+- `bem-classnames-v2-migration` - migration workflow from v1 to v2.
 
 ## Build
 

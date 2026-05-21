@@ -1,4 +1,4 @@
-# BEM modifier classes
+# BEM classnames
 
 A TypeScript utility for generating BEM modifier class names from component props.
 
@@ -7,31 +7,31 @@ A TypeScript utility for generating BEM modifier class names from component prop
 With `pnpm`
 
 ```bash
-pnpm add @trenlok/bem-modifier-classes
+pnpm add @rhapsodic/bem-classnames
 ```
 
 Or, with `npm`
 
 ```bash
-npm install @trenlok/bem-modifier-classes
+npm install @rhapsodic/bem-classnames
 ```
 
 Or, with `yarn`
 
 ```bash
-yarn add @trenlok/bem-modifier-classes
+yarn add @rhapsodic/bem-classnames
 ```
 
 Or, with `bun`
 
 ```bash
-bun add @trenlok/bem-modifier-classes
+bun add @rhapsodic/bem-classnames
 ```
 
 ## Quick start
 
 ```typescript
-import { bmc, flag } from '@trenlok/bem-modifier-classes';
+import { bmc, flag } from '@rhapsodic/bem-classnames';
 
 const buttonClasses = bmc('button', {
   size: true,
@@ -57,13 +57,13 @@ This repository includes provider-agnostic agent skills in [`skills`](skills).
 Install them directly from GitHub:
 
 ```bash
-npx skills add TrenLok/bem-modifiers-classes --all
+npx skills add rhapsodic-dev/bem-classnames --all
 ```
 
 They can also be installed as a package:
 
 ```bash
-pnpm add -D @trenlok/bem-modifier-classes-skills skills-npm
+pnpm add -D @rhapsodic/bem-classnames-skills skills-npm
 ```
 
 Add `skills-npm` to the consuming project's prepare script:

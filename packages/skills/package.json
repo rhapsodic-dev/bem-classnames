@@ -1,24 +1,24 @@
 {
-  "name": "@trenlok/bem-modifier-classes-skills",
+  "name": "@rhapsodic/bem-classnames-skills",
   "version": "1.0.2",
-  "description": "Agent skills for @trenlok/bem-modifier-classes",
+  "description": "Agent skills for @rhapsodic/bem-classnames",
   "type": "module",
   "license": "MIT",
-  "author": "TrenLok",
-  "homepage": "https://github.com/TrenLok/bem-modifiers-classes#readme",
+  "author": "Rhapsodic",
+  "homepage": "https://github.com/rhapsodic-dev/bem-classnames#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TrenLok/bem-modifiers-classes.git",
+    "url": "git+https://github.com/rhapsodic-dev/bem-classnames.git",
     "directory": "packages/skills"
   },
   "bugs": {
-    "url": "https://github.com/TrenLok/bem-modifiers-classes/issues"
+    "url": "https://github.com/rhapsodic-dev/bem-classnames/issues"
   },
   "keywords": [
     "bem",
     "skills",
     "agent-skills",
-    "bem-modifier-classes"
+    "bem-classnames"
   ],
   "scripts": {
     "build": "node build.ts"

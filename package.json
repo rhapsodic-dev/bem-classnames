@@ -1,17 +1,17 @@
 {
-  "name": "@trenlok/bem-modifier-classes",
+  "name": "@rhapsodic/bem-classnames",
   "version": "1.0.2",
-  "author": "TrenLok",
-  "description": "BEM modifier classes is a utility for generating modifier classes according to the BEM methodology",
+  "author": "Rhapsodic",
+  "description": "A TypeScript utility for generating BEM modifier class names from component props",
   "type": "module",
   "license": "MIT",
-  "homepage": "https://github.com/TrenLok/bem-modifiers-classes#readme",
+  "homepage": "https://github.com/rhapsodic-dev/bem-classnames#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TrenLok/bem-modifiers-classes.git"
+    "url": "git+https://github.com/rhapsodic-dev/bem-classnames.git"
   },
   "bugs": {
-    "url": "https://github.com/TrenLok/bem-modifiers-classes/issues"
+    "url": "https://github.com/rhapsodic-dev/bem-classnames/issues"
   },
   "keywords": [
     "bem"
@@ -39,7 +39,7 @@
     "format:scripts": "eslint . --fix",
     "prepare": "pnpm run hooks:install",
     "typecheck": "tsc --noEmit",
-    "build:skills": "pnpm --filter @trenlok/bem-modifier-classes-skills build",
+    "build:skills": "pnpm --filter @rhapsodic/bem-classnames-skills build",
     "release": "bumpp",
     "hooks:install": "pnpm exec simple-git-hooks"
   },

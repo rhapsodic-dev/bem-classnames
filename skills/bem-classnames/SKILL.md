@@ -1,18 +1,18 @@
 ---
-name: bem-modifier-classes
-description: Use when an agent needs to explain, write, review, or fix code that uses the `@trenlok/bem-modifier-classes` package, including `bmc`, `flag`, `variant`, modifier settings, whitelist behavior, custom modifiers, and TypeScript inference.
+name: bem-classnames
+description: Use when an agent needs to explain, write, review, or fix code that uses the `@rhapsodic/bem-classnames` package, including `bmc`, `flag`, `variant`, modifier settings, whitelist behavior, custom modifiers, and TypeScript inference.
 ---
 
-# BEM Modifier Classes
+# BEM Classnames
 
-Use this skill to work with `@trenlok/bem-modifier-classes` v2 API.
+Use this skill to work with `@rhapsodic/bem-classnames` v2 API.
 
 ## Core API
 
 Import from the package with ESM:
 
 ```ts
-import { bmc, flag, variant } from '@trenlok/bem-modifier-classes';
+import { bmc, flag, variant } from '@rhapsodic/bem-classnames';
 ```
 
 `bmc(base, settings?)` returns a function that maps props to a class list:

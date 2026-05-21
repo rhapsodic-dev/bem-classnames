@@ -1,11 +1,11 @@
 ---
-name: bem-modifier-classes-v2-migration
-description: Use when an agent needs to automatically migrate code from `@trenlok/bem-modifier-classes` v1 to v2, including converting configs to direct shorthand syntax, replacing `booleanModifier`/`stringModifier`, removing `customModifiers`, converting CommonJS imports to ESM, updating modifier settings, and validating with tests and typecheck.
+name: bem-classnames-v2-migration
+description: Use when an agent needs to automatically migrate code from `@rhapsodic/bem-classnames` v1 to v2, including converting configs to direct shorthand syntax, replacing `booleanModifier`/`stringModifier`, removing `customModifiers`, converting CommonJS imports to ESM, updating modifier settings, and validating with tests and typecheck.
 ---
 
-# BEM Modifier Classes v2 Migration
+# BEM Classnames v2 Migration
 
-Use this skill to migrate consumers from `@trenlok/bem-modifier-classes` v1 to
+Use this skill to migrate consumers from `@rhapsodic/bem-classnames` v1 to
 v2.
 
 ## Migration Workflow
@@ -13,17 +13,17 @@ v2.
 1. Search for package usage:
 
 ```bash
-rg "@trenlok/bem-modifier-classes|booleanModifier|stringModifier|customModifiers|require\\("
+rg "@rhapsodic/bem-classnames|booleanModifier|stringModifier|customModifiers|require\\("
 ```
 
 2. Replace removed imports:
 
 ```ts
 // Before
-import { bmc, booleanModifier, stringModifier } from '@trenlok/bem-modifier-classes';
+import { bmc, booleanModifier, stringModifier } from '@rhapsodic/bem-classnames';
 
 // After
-import { bmc, flag, variant } from '@trenlok/bem-modifier-classes';
+import { bmc, flag, variant } from '@rhapsodic/bem-classnames';
 ```
 
 3. Replace helper calls:
@@ -54,16 +54,16 @@ v2 is ESM-only. Replace CommonJS imports:
 
 ```js
 // Before
-const { bmc } = require('@trenlok/bem-modifier-classes');
+const { bmc } = require('@rhapsodic/bem-classnames');
 
 // After
-import { bmc } from '@trenlok/bem-modifier-classes';
+import { bmc } from '@rhapsodic/bem-classnames';
 ```
 
 If the file cannot be converted to ESM, use dynamic import:
 
 ```js
-const { bmc } = await import('@trenlok/bem-modifier-classes');
+const { bmc } = await import('@rhapsodic/bem-classnames');
 ```
 
 ## Helper Renames

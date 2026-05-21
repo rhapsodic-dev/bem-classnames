@@ -3,7 +3,7 @@
 ### Basic usage
 
 ```typescript
-import { bmc } from '@trenlok/bem-modifier-classes';
+import { bmc } from '@rhapsodic/bem-classnames';
 
 interface ButtonProps {
   size: 'small' | 'medium' | 'large';
@@ -29,7 +29,7 @@ You can pass modifier settings directly as the second argument to `bmc`.
 
 
 ```typescript
-import { bmc, flag } from '@trenlok/bem-modifier-classes';
+import { bmc, flag } from '@rhapsodic/bem-classnames';
 
 const classNames = bmc('button-secondary', {
   variant: true,
@@ -61,7 +61,7 @@ const classes = classNames({
 ### More examples
 
 ```typescript
-import { bmc, flag } from '@trenlok/bem-modifier-classes';
+import { bmc, flag } from '@rhapsodic/bem-classnames';
 
 interface ButtonIconProps {
   isActive: boolean;
@@ -155,7 +155,7 @@ const inferredVariant = variant('theme', {
 Without `whitelist`, extra string props are also converted into classes:
 
 ```typescript
-import { bmc, flag } from '@trenlok/bem-modifier-classes';
+import { bmc, flag } from '@rhapsodic/bem-classnames';
 
 const classNames = bmc('button', {
   modifiers: {
