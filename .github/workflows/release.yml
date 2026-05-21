@@ -41,7 +41,7 @@ jobs:
         run: pnpm vitest run --coverage --coverage.threshold=80 --coverage.reporter=text-summary
 
       - name: Build packages
-        run: pnpm build && pnpm build:skills
+        run: pnpm build
 
       - name: Validate package publish
         run: |
@@ -60,4 +60,4 @@ jobs:
       - name: Create GitHub release notes
         run: npx changelogithub
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

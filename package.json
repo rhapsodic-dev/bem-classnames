@@ -30,7 +30,7 @@
   ],
   "scripts": {
     "dev": "tsdown --watch",
-    "build": "tsdown",
+    "build": "pnpm run build:lib && pnpm run build:skills",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "pnpm run lint:scripts",
@@ -39,6 +39,7 @@
     "format:scripts": "eslint . --fix",
     "prepare": "pnpm run hooks:install",
     "typecheck": "tsc --noEmit",
+    "build:lib": "tsdown",
     "build:skills": "pnpm --filter @rhapsodic/bem-classnames-skills build",
     "release": "bumpp",
     "hooks:install": "pnpm exec simple-git-hooks"
