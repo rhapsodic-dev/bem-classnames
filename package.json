@@ -31,6 +31,7 @@
   "scripts": {
     "dev": "tsdown --watch",
     "build": "pnpm run build:lib && pnpm run build:skills",
+    "bench": "pnpm run build:lib && node tests/benchmarks/index.ts",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "pnpm run lint:scripts",
@@ -53,6 +54,7 @@
     "eslint": "^10.4.0",
     "lint-staged": "^17.0.5",
     "simple-git-hooks": "^2.13.1",
+    "tinybench": "6.0.2",
     "tsdown": "^0.22.0",
     "typescript": "~6.0.3",
     "vitest": "^4.1.6"
