@@ -26,6 +26,17 @@ import { bmc, booleanModifier, stringModifier } from '@rhapsodic/bem-classnames'
 import { bmc, flag, variant } from '@rhapsodic/bem-classnames';
 ```
 
+If the project still imports the old package name, replace it with the new
+package name:
+
+```ts
+// Before
+import { bmc } from '@trenlok/bem-modifier-classes';
+
+// After
+import { bmc } from '@rhapsodic/bem-classnames';
+```
+
 3. Replace helper calls:
 
 ```ts
