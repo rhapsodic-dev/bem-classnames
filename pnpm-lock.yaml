@@ -4,46 +4,96 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  build:
+    tsdown:
+      specifier: ^0.22.0
+      version: 0.22.0
+  hooks:
+    '@commitlint/cli':
+      specifier: ^21.0.1
+      version: 21.0.1
+    '@commitlint/config-conventional':
+      specifier: ^21.0.1
+      version: 21.0.1
+    lint-staged:
+      specifier: ^17.0.5
+      version: 17.0.5
+    simple-git-hooks:
+      specifier: ^2.13.1
+      version: 2.13.1
+  lint:
+    '@rhapsodic/eslint-config':
+      specifier: ^1.0.4
+      version: 1.0.4
+    eslint:
+      specifier: ^10.4.0
+      version: 10.4.0
+  release:
+    bumpp:
+      specifier: ^11.1.0
+      version: 11.1.0
+  test:
+    '@vitest/coverage-v8':
+      specifier: ^4.1.6
+      version: 4.1.6
+    tinybench:
+      specifier: 6.0.2
+      version: 6.0.2
+    vitest:
+      specifier: ^4.1.6
+      version: 4.1.6
+  types:
+    typescript:
+      specifier: ~6.0.3
+      version: 6.0.3
+
 importers:
 
   .:
     devDependencies:
       '@commitlint/cli':
-        specifier: ^21.0.1
+        specifier: catalog:hooks
         version: 21.0.1(@types/node@25.9.1)(conventional-commits-parser@6.4.0)(typescript@6.0.3)
       '@commitlint/config-conventional':
-        specifier: ^21.0.1
+        specifier: catalog:hooks
         version: 21.0.1
       '@rhapsodic/eslint-config':
-        specifier: ^1.0.4
+        specifier: catalog:lint
         version: 1.0.4(@typescript-eslint/utils@8.59.4(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3))(@vue/compiler-sfc@3.5.34)(eslint@10.4.0(jiti@2.7.0))(typescript@6.0.3)
       '@vitest/coverage-v8':
-        specifier: ^4.1.6
+        specifier: catalog:test
         version: 4.1.6(vitest@4.1.6)
       bumpp:
-        specifier: ^11.1.0
+        specifier: catalog:release
         version: 11.1.0
       eslint:
-        specifier: ^10.4.0
+        specifier: catalog:lint
         version: 10.4.0(jiti@2.7.0)
       lint-staged:
-        specifier: ^17.0.5
+        specifier: catalog:hooks
         version: 17.0.5
       simple-git-hooks:
-        specifier: ^2.13.1
+        specifier: catalog:hooks
         version: 2.13.1
       tinybench:
-        specifier: 6.0.2
+        specifier: catalog:test
         version: 6.0.2
-      tsdown:
-        specifier: ^0.22.0
-        version: 0.22.0(typescript@6.0.3)
       typescript:
-        specifier: ~6.0.3
+        specifier: catalog:types
         version: 6.0.3
       vitest:
-        specifier: ^4.1.6
+        specifier: catalog:test
         version: 4.1.6(@types/node@25.9.1)(@vitest/coverage-v8@4.1.6)(vite@7.3.3(@types/node@25.9.1)(jiti@2.7.0)(yaml@2.9.0))
+
+  packages/bem-classnames:
+    devDependencies:
+      tsdown:
+        specifier: catalog:build
+        version: 0.22.0(typescript@6.0.3)
+      typescript:
+        specifier: catalog:types
+        version: 6.0.3
 
   packages/skills: {}
 

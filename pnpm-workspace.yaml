@@ -1,6 +1,26 @@
 packages:
   - packages/*
 
+catalogs:
+  build:
+    tsdown: ^0.22.0
+  hooks:
+    '@commitlint/cli': ^21.0.1
+    '@commitlint/config-conventional': ^21.0.1
+    lint-staged: ^17.0.5
+    simple-git-hooks: ^2.13.1
+  lint:
+    '@rhapsodic/eslint-config': ^1.0.4
+    eslint: ^10.4.0
+  release:
+    bumpp: ^11.1.0
+  test:
+    '@vitest/coverage-v8': ^4.1.6
+    tinybench: 6.0.2
+    vitest: ^4.1.6
+  types:
+    typescript: ~6.0.3
+
 allowBuilds:
   esbuild: true
   simple-git-hooks: true

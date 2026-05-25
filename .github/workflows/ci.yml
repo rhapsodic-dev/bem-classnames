@@ -64,4 +64,4 @@ jobs:
         run: pnpm ci
 
       - name: Run tests with coverage check
-        run: pnpm vitest run --coverage --coverage.threshold=80 --coverage.reporter=text-summary
+        run: pnpm exec vitest run --coverage --coverage.threshold=80 --coverage.reporter=text-summary

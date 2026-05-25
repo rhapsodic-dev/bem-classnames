@@ -1,4 +1,4 @@
-const { rhapsodic } = await import('@rhapsodic/eslint-config');
+import { rhapsodic } from '@rhapsodic/eslint-config';
 
 export default rhapsodic({
   vue: false,

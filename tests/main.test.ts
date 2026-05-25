@@ -9,14 +9,14 @@ import {
   flag,
   variant,
   bmc,
-} from '../src';
+} from '../packages/bem-classnames/src';
 import type {
   BooleanModifierSettings,
   ModifiersSettings,
   PropInfoBoolean,
   PropInfoString,
   StringModifierSettings,
-} from '../src/types';
+} from '../packages/bem-classnames/src/types';
 import {
   getBooleanModifierClassName,
   getBooleanModifierSettings,
@@ -29,7 +29,7 @@ import {
   getPropsInfo,
   getStringModifierSettings,
   toKebabCase,
-} from '../src/utils';
+} from '../packages/bem-classnames/src/utils';
 
 describe('Test Utility Functions', () => {
   test('getClassName', () => {

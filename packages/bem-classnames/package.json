@@ -1,7 +1,7 @@
 {
-  "name": "@rhapsodic/bem-classnames-skills",
+  "name": "@rhapsodic/bem-classnames",
   "version": "2.0.3",
-  "description": "Agent skills for @rhapsodic/bem-classnames",
+  "description": "A TypeScript utility for generating BEM modifier class names from component props",
   "type": "module",
   "license": "MIT",
   "author": {
@@ -25,22 +25,32 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rhapsodic-dev/bem-classnames.git",
-    "directory": "packages/skills"
+    "directory": "packages/bem-classnames"
   },
   "bugs": {
     "url": "https://github.com/rhapsodic-dev/bem-classnames/issues"
   },
   "keywords": [
-    "bem",
-    "skills",
-    "agent-skills",
-    "bem-classnames"
+    "bem"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
   ],
   "scripts": {
-    "build": "node build.ts"
+    "dev": "tsdown --watch",
+    "build": "tsdown"
   },
-  "files": [
-    "skills",
-    "README.md"
-  ]
+  "devDependencies": {
+    "tsdown": "catalog:build",
+    "typescript": "catalog:types"
+  }
 }

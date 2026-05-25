@@ -38,22 +38,18 @@ jobs:
         run: pnpm typecheck
 
       - name: Run tests with coverage check
-        run: pnpm vitest run --coverage --coverage.threshold=80 --coverage.reporter=text-summary
+        run: pnpm exec vitest run --coverage --coverage.threshold=80 --coverage.reporter=text-summary
 
       - name: Build packages
         run: pnpm build
 
       - name: Validate package publish
-        run: |
-          pnpm publish --dry-run --access public --no-git-checks
-          pnpm --dir packages/skills publish --dry-run --access public --no-git-checks
+        run: pnpm -r publish --dry-run --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish to NPM
-        run: |
-          pnpm publish --access public --no-git-checks
-          pnpm --dir packages/skills publish --access public --no-git-checks
+        run: pnpm -r publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
