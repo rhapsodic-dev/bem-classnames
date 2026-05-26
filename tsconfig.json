@@ -6,6 +6,10 @@
     "lib": ["ES2020"],
     "skipLibCheck": true,
     "moduleResolution": "bundler",
+    "paths": {
+      "@rhapsodic/bem-classnames": ["./packages/bem-classnames/src/index.ts"],
+      "@rhapsodic/bem-classnames-vue": ["./packages/bem-classnames-vue/src/index.ts"]
+    },
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
