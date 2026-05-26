@@ -1,6 +1,6 @@
 {
   "name": "@rhapsodic/bem-classnames",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "A TypeScript utility for generating BEM modifier class names from component props",
   "type": "module",
   "license": "MIT",

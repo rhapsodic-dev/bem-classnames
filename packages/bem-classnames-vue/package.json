@@ -1,6 +1,6 @@
 {
   "name": "@rhapsodic/bem-classnames-vue",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "Vue 3 composables for @rhapsodic/bem-classnames",
   "type": "module",
   "license": "MIT",
