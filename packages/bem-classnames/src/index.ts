@@ -23,6 +23,11 @@ import {
   getStringModifierSettings,
 } from './utils';
 
+export type {
+  BmcInputSettings,
+  ModifierPrimitiveValue,
+} from './types';
+
 export function flag(
   modifier?: string,
   stateIfTrue?: string,

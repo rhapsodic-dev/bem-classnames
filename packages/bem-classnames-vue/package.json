@@ -1,0 +1,66 @@
+{
+  "name": "@rhapsodic/bem-classnames-vue",
+  "version": "2.0.3",
+  "description": "Vue 3 composables for @rhapsodic/bem-classnames",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "rhapsodic.dev",
+    "email": "rhapsodic.dev@gmail.com",
+    "url": "https://github.com/rhapsodic-dev"
+  },
+  "contributors": [
+    {
+      "name": "Svyatoslav Fyodorov",
+      "email": "intelrug@gmail.com",
+      "url": "https://github.com/intelrug"
+    },
+    {
+      "name": "TrenLok",
+      "email": "trenlok.dev@gmail.com",
+      "url": "https://github.com/trenlok"
+    }
+  ],
+  "homepage": "https://github.com/rhapsodic-dev/bem-classnames#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhapsodic-dev/bem-classnames.git",
+    "directory": "packages/bem-classnames-vue"
+  },
+  "bugs": {
+    "url": "https://github.com/rhapsodic-dev/bem-classnames/issues"
+  },
+  "keywords": [
+    "bem",
+    "vue",
+    "vue3",
+    "composable"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "tsdown --watch",
+    "build": "tsdown"
+  },
+  "dependencies": {
+    "@rhapsodic/bem-classnames": "workspace:^"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "tsdown": "catalog:build",
+    "typescript": "catalog:types",
+    "vue": "catalog:vue"
+  }
+}

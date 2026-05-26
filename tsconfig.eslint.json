@@ -5,9 +5,9 @@
     "noEmit": true
   },
   "include": [
-    "packages/bem-classnames/src/**/*.ts",
     "tests/**/*.ts",
     "packages/**/*.ts",
+    "playgrounds/**/*.ts",
     "*.config.ts",
     ".*.ts"
   ]

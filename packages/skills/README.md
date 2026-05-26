@@ -45,12 +45,14 @@ Install a specific skill:
 
 ```bash
 npx skills add rhapsodic-dev/bem-classnames --skill bem-classnames
+npx skills add rhapsodic-dev/bem-classnames --skill bem-classnames-vue
 npx skills add rhapsodic-dev/bem-classnames --skill bem-classnames-v2-migration
 ```
 
 ## Included Skills
 
 - `bem-classnames` - usage guide for the v2 API.
+- `bem-classnames-vue` - Vue 3 usage guide for `useBMC`.
 - `bem-classnames-v2-migration` - migration workflow from v1 to v2.
 
 ## Build

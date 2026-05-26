@@ -1,0 +1,21 @@
+{
+  "name": "@rhapsodic/bem-classnames-vue-playground",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@rhapsodic/bem-classnames-vue": "workspace:^",
+    "vue": "catalog:vue"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "catalog:vue",
+    "typescript": "catalog:types",
+    "vite": "catalog:vue",
+    "vue-tsc": "catalog:vue"
+  }
+}

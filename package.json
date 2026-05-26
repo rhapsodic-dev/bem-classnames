@@ -24,7 +24,10 @@
   "license": "MIT",
   "scripts": {
     "dev": "pnpm --filter @rhapsodic/bem-classnames dev",
+    "play:lib": "pnpm --filter @rhapsodic/bem-classnames-playground dev",
+    "play:vue": "pnpm --filter @rhapsodic/bem-classnames-vue-playground dev",
     "build": "pnpm -r build",
+    "build:playgrounds": "pnpm run build:lib && pnpm run build:vue && pnpm --filter \"@rhapsodic/*playground\" build",
     "bench": "pnpm run build:lib && node tests/benchmarks/index.ts",
     "test": "vitest",
     "coverage": "vitest run --coverage",
@@ -35,8 +38,9 @@
     "prepare": "pnpm run hooks:install",
     "typecheck": "tsc --noEmit",
     "build:lib": "pnpm --filter @rhapsodic/bem-classnames build",
+    "build:vue": "pnpm --filter @rhapsodic/bem-classnames-vue build",
     "build:skills": "pnpm --filter @rhapsodic/bem-classnames-skills build",
-    "release": "bumpp",
+    "release": "bumpp -r",
     "hooks:install": "pnpm exec simple-git-hooks"
   },
   "devDependencies": {
