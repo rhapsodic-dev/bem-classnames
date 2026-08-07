@@ -20,7 +20,7 @@ catalogs:
     tinybench: 6.1.2
     vitest: ^4.1.10
   types:
-    typescript: ~6.0.3
+    typescript: ~7.0.2
   vue:
     '@vitejs/plugin-vue': ^6.0.8
     vite: ^7.3.6
