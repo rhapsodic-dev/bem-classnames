@@ -32,22 +32,22 @@ export function getPropsInfo(props: Record<string, unknown>): PropInfo[] {
   });
 }
 
-export function getBooleanValueStateDefault(state: boolean): string {
-  return state ? 'active' : 'inactive';
+export function getBooleanValueStateDefault(isActive: boolean): string {
+  return isActive ? 'active' : 'inactive';
 }
 
-export function getBooleanValueState(state: boolean, valueIfTrue?: string, valueIfFalse?: string): string {
+export function getBooleanValueState(isActive: boolean, valueIfTrue?: string, valueIfFalse?: string): string {
   const stateIfTrue = valueIfTrue ?? getBooleanValueStateDefault(true);
   const stateIfFalse = valueIfFalse ?? getBooleanValueStateDefault(false);
-  return state ? stateIfTrue : stateIfFalse;
+  return isActive ? stateIfTrue : stateIfFalse;
 }
 
 export function getClassName(base: string, modifier: string, value: string): string {
   return `${base}_${toKebabCase(modifier)}_${toKebabCase(value)}`;
 }
 
-export function getDefaultClassNameFromBoolean(base: string, modifier: string, state: boolean): string {
-  return getClassName(base, modifier, getBooleanValueStateDefault(state));
+export function getDefaultClassNameFromBoolean(base: string, modifier: string, isActive: boolean): string {
+  return getClassName(base, modifier, getBooleanValueStateDefault(isActive));
 }
 
 export function getBooleanModifierClassName(
@@ -148,12 +148,13 @@ export function getClassNameFromStringSettings(
 
   if (typeof normalizedSettings === 'object') {
     const modifierFromSettings = normalizedSettings.modifier ?? stringProp.modifier;
-    const valueFromSettings = normalizedSettings.variants?.[stringProp.value];
+    const variants = normalizedSettings.variants;
+    const valueFromSettings = variants?.[stringProp.value];
+    const hasVariant = variants ? Object.keys(variants).includes(stringProp.value) : false;
 
     if (
-      normalizedSettings.variants
-      && stringProp.value in normalizedSettings.variants
-      && valueFromSettings === undefined
+      valueFromSettings === undefined
+      && hasVariant
     ) {
       // A matched variant with `undefined` is an explicit opt-out for this value.
       return;

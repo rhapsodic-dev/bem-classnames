@@ -140,9 +140,8 @@ function processBooleanProp(
 
   if (modifierSettings) {
     return getClassNameFromBooleanSettings(base, modifierSettings, propInfo);
-  } else {
-    return getDefaultClassNameFromBoolean(base, propInfo.modifier, propInfo.value);
   }
+  return getDefaultClassNameFromBoolean(base, propInfo.modifier, propInfo.value);
 }
 
 function isBmcSettings(settings: RuntimeBmcInputSettings): settings is RuntimeBmcSettings {
@@ -224,9 +223,7 @@ export function bmc(
 
         if (!className) continue;
         classList.push(className);
-      }
-
-      if (propInfo.type === 'boolean') {
+      } else if (propInfo.type === 'boolean') {
         const booleanProp = propInfo as PropInfoBoolean;
         const className = processBooleanProp(
           base,
