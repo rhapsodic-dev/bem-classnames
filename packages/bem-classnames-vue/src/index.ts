@@ -6,9 +6,7 @@ import type {
   BmcInputSettings,
   ModifierPrimitiveValue,
 } from '@rhapsodic/bem-classnames';
-import {
-  bmc,
-} from '@rhapsodic/bem-classnames';
+import { bmc } from '@rhapsodic/bem-classnames';
 
 import type {
   ComputedRef,
@@ -50,8 +48,9 @@ export function useBMC<TProps extends object, TExtra extends BemClassNamesExtra 
 
   return computed(() => {
     const extraValues: Record<string, BemModifierValue> = {};
+    const entries = Object.entries(toValue(extra) ?? {});
 
-    for (const [key, value] of Object.entries(toValue(extra) ?? {})) {
+    for (const [key, value] of entries) {
       extraValues[key] = toValue(value);
     }
 

@@ -9,11 +9,12 @@ import { fileURLToPath } from 'node:url';
 const r = (path: string) => fileURLToPath(new URL(path, import.meta.url));
 
 const SKILLS_DIR = r('./skills');
-const SKILLS_COPY_DIR = r('../../skills');
 
 if (!existsSync(SKILLS_DIR)) {
   throw new Error(`Missing skills directory: ${SKILLS_DIR}`);
 }
+
+const SKILLS_COPY_DIR = r('../../skills');
 
 rmSync(SKILLS_COPY_DIR, { recursive: true, force: true });
 cpSync(SKILLS_DIR, SKILLS_COPY_DIR, { recursive: true, force: true });

@@ -1,9 +1,17 @@
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import {
+  mkdir,
+  readFile,
+  writeFile,
+} from 'node:fs/promises';
 import path from 'node:path';
 
 import { Bench } from 'tinybench';
 
-import { bmc, flag, variant } from '../../packages/bem-classnames/dist/index.js';
+import {
+  bmc,
+  flag,
+  variant,
+} from '../../packages/bem-classnames/dist/index.js';
 
 interface BenchmarkCase {
   name: string;
