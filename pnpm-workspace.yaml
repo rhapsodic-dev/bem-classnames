@@ -14,7 +14,7 @@ catalogs:
     '@rhapsodic/eslint-config': ^5.0.0
     eslint: ^10.7.0
   release:
-    bumpp: ^11.1.0
+    bumpp: ^12.2.1
   test:
     '@vitest/coverage-v8': ^4.1.10
     tinybench: 6.1.2
