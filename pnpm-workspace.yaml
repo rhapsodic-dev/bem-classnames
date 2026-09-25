@@ -16,9 +16,9 @@ catalogs:
   release:
     bumpp: ^12.3.0
   test:
-    '@vitest/coverage-v8': ^4.1.11
+    '@vitest/coverage-v8': ^5.0.0
     tinybench: 6.1.6
-    vitest: ^4.1.11
+    vitest: ^5.0.0
   types:
     typescript: ~6.0.3
   vue:
