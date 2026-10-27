@@ -11,7 +11,7 @@ catalogs:
     lint-staged: ^17.6.0
     simple-git-hooks: ^2.14.0
   lint:
-    '@rhapsodic/eslint-config': ^5.0.0
+    '@rhapsodic/eslint-config': ^6.0.0
     eslint: ^10.11.0
   release:
     bumpp: ^12.3.0
