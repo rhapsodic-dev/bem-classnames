@@ -4,28 +4,28 @@ packages:
 
 catalogs:
   build:
-    tsdown: ^0.23.0
+    tsdown: ^0.23.4
   hooks:
-    '@commitlint/cli': ^21.2.3
-    '@commitlint/config-conventional': ^21.2.3
+    '@commitlint/cli': ^21.2.4
+    '@commitlint/config-conventional': ^21.2.4
     lint-staged: ^17.6.0
     simple-git-hooks: ^2.14.0
   lint:
     '@rhapsodic/eslint-config': ^5.0.0
-    eslint: ^10.11.0
+    eslint: ^10.14.0
   release:
     bumpp: ^12.3.0
   test:
-    '@vitest/coverage-v8': ^5.0.2
-    tinybench: 6.2.0
-    vitest: ^5.0.2
+    '@vitest/coverage-v8': ^5.0.5
+    tinybench: 6.2.2
+    vitest: ^5.0.5
   types:
     typescript: ~6.0.3
   vue:
-    '@vitejs/plugin-vue': ^6.0.9
-    vite: ^8.3.1
-    vue: ^3.5.43
-    vue-tsc: ^3.3.11
+    '@vitejs/plugin-vue': ^6.0.10
+    vite: ^8.3.5
+    vue: ^3.5.44
+    vue-tsc: ^3.3.14
 
 allowBuilds:
   esbuild: true
